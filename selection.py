@@ -102,7 +102,6 @@ def MoM(L, k):
     A, B, M, medians = [], [], [], []
 
     i = 0
-
     while i + 4 < len(L):
         medians.append(find_median_five(L[i:i+5]))
         i += 4
