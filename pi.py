@@ -11,7 +11,6 @@ def long_add(A, B, C):
             carry = 1
         else:
             carry = 0
-        K += 1
 
 
 def long_sub(A, B, C):
@@ -30,8 +29,14 @@ def long_sub(A, B, C):
 def long_div(A, b, C):
     # 배열 A를 정수 b로 나누어 배열 C에 저장, C = A/b
     d = len(A)
-    for i in range(d-1, -1, -1):
-        C[i] = A[i] // B[i]
+    count = 0
+    for i in range(d):
+        if b > A[i]:
+            A[i] *= 10
+            C[i] *= 10
+        else:
+            C[i] += (A[i] // b)
+            A[i] = (A[i] % b)
 
 
 P = int(input("Precision = "))
