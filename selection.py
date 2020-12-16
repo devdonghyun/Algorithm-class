@@ -1,4 +1,5 @@
 def QuickSelect(L, k):
+    print(L, k)
     p = L[0]
     A, M, B = [], [], []
     for x in L:
