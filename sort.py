@@ -19,7 +19,8 @@ def quick_sort(A, first, last):
         return
 
     left, right = first + 1, last
-    pivot = A[first]
+    pivot = A[first]                                                                                                   
+
     while left <= right:
         while left <= last and A[left] < pivot:
             Qc += 1
